@@ -1,0 +1,16 @@
+{
+  "name": "bookbuddy-reason",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lambda": "npm install --omit=dev && rm -f function.zip && zip -r function.zip . -x './.git/*' -x './examples/*'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "openai": "^4.20.1"
+  }
+}
