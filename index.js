@@ -27,9 +27,9 @@ exports.handler = async (event, _context) => {
     const chatResponse = await openai.chat.completions.create({
             model: "gpt-4-1106-preview",
             messages: [
-                {role: "system", "content": "You give great book recommendations. Limit responses to under 40 words."},
+                {role: "system", "content": "You give great book recommendations. Limit responses to under 35 words."},
                 {role: "user", "content": lookingFor},
-                {role: "user", "content": `You suggested ${bookTitle} by ${bookAuthor}. Why is this book a great choice for me? What will I enjoy most?`},
+                {role: "user", "content": `You suggested ${bookTitle} by ${bookAuthor}. Why will I love this book?`},
             ],
             functions: functions,
             function_call: {name: functionName}
